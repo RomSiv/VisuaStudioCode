@@ -1,0 +1,38 @@
+// console.log("hello world")
+
+// let a =10
+// a = 100
+// console.log(a)
+
+// const b = 12
+// // const b = 13 //не можем переопределить в случае const
+// console.log(b)
+
+// const numbers = [1, 2, 3, 4, 5]
+
+// numbers.push(6) // в масиве объявленом через const можем менять содержимое массива, но не можем переназначить его
+// console.log(numbers)
+
+// const  a = 15
+
+// if (a >=10) {
+//     console.log("hello")
+//     } else {console.log("hi")
+// }
+
+// // тернарный операнор
+
+// a >= 10 ? console.log('hello') : console.log("hi")
+
+
+const numbers = [6, 7, 1, -10, 78, 18, -5, -38, 9];
+const newNumbers = []
+
+for (let i = 0; i < numbers.length; i++) {
+    if(numbers[i] > 0)
+        newNumbers.push(numbers[i] / 2)
+}
+console.log(newNumbers);
+
+
+

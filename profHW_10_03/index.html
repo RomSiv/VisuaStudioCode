@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //         Легкий уровень сложности:
+      // Напишите цикл, который выводит в консоль числа от 1 до 10.
+
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+
+      // Напишите цикл, который находит наименьшее число в массиве.
+
+      let minNumber = 0;
+      const arr = [1, 24, -3, 5, -2, 76];
+      for (let index = 0; index < arr.length; index++) {
+        if (arr[index] < minNumber) minNumber = arr[index];
+      }
+      console.log(minNumber);
+
+      // Напишите цикл, который считает сумму всех чисел от 1 до 100.
+
+      let sum = 0;
+      for (let i = 1; i <= 100; i++) {
+        sum += i;
+      }
+      console.log(sum);
+
+      // Напишите цикл, который выводит в консоль каждый второй элемент массива.
+
+      const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let secondNumbersArr = [];
+      for (let index = 0; index < array.length; index++) {
+        if (array[index] % 2 === 0) {
+          secondNumbersArr.push(array[index]);
+        }
+      }
+      console.log(secondNumbersArr);
+      // Напишите цикл, который находит наибольшее число в массиве.
+
+      let maxNumber = 0;
+      const arrMaxNumber = [1, 24, -3, 5, -2, 76];
+      for (let index = 0; index < arrMaxNumber.length; index++) {
+        if (arrMaxNumber[index] > maxNumber) maxNumber = arrMaxNumber[index];
+      }
+      console.log(maxNumber);
+
+      // Средний уровень сложности:
+      // Напишите цикл, который выводит в консоль все простые числа от 2 до 100.
+
+      for (let i = 2; i <= 100; i++) {
+        for (let k = 2; k <= i; k++) {
+          if (i % k === 0 && k < i) {
+            break;
+          } else if (k === i) {
+            console.log(i);
+          }
+        }
+      }
+
+      // Напишите цикл, который находит среднее арифметическое всех чисел в массиве.
+
+      const valueNumbers = [1, 24, -3, 5, -2, 76];
+      let sumArr = 0;
+      for (let index = 0; index < valueNumbers.length; index++) {
+        sumArr = sumArr + valueNumbers[index];
+      }
+      console.log(sumArr / valueNumbers.length);
+
+      // Напишите цикл, который выводит в консоль таблицу умножения на 5.
+
+      const x = 5
+
+      for (let i = 1; i <= 10; i++) {
+        console.log(i + "*" + x + "=" + i*x)
+        
+      }
+      // Напишите цикл, который переворачивает порядок элементов в массиве.
+
+      const arrayReverse = [1, 24, -3, 5, -2, 76];
+for (let index = arrayReverse.length; index > 0; index--) {
+    console.log(arrayReverse[index])
+}
+
+      // Напишите цикл, который находит сумму элементов массива, кратных 3 или 5.
+newSum = 0
+const arrayNew = [1, 24, 3, 5, 2, 76, 11, 22, 64, 52, 22, 6];
+for (let i = 0; i < arrayNew.length; i++) {
+   if(arrayNew[i] % 3 === 0 || arrayNew[i] % 5 === 0 )
+     newSum = arrayNew[i] + newSum
+}
+console.log(newSum)
+
+    </script>
+  </body>
+</html>

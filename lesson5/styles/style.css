@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin:  0px;
+    box-sizing: border-box;
+}
+
+div {
+    border: 1px solid black;
+    /* text-align: center; */
+    padding: 10px;
+    /* склеивает строчные элементы */
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+p {
+    border: 1px solid red;
+    /* display: inline-block;
+    vertical-align: text-bottom; */
+}
+
+div p:nth-child(2) {
+    width: 100px;
+    height: 100px;
+}
+
+div p:nth-child(3) {
+    width: 60px;
+    height: 60px;
+}
+
+div p:nth-child(4) {
+    width: 100px;
+    height: 60px;
+}
+
+div p:nth-child(5) {
+    width: 60px;
+    height: 100px;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const min = (a,b) => a<b ? a : b 
+        
+
+            console.log(min(11, 15))
+
+
+            // Задание номер 3:
+
+// Написать функцию - которая вернет слово большее по количеству букв. Стрелочная. Принимать в качестве аргументов она должна 2 слова
+
+const minWorld = (a, b) => { 
+    if(a.length > b.length){
+        return b
+    }
+} 
+
+console.log(minWorld ('Helloo', 'world'))
+
+
+// Задание 4:
+
+// Написать функцию. Стрелочную. Принимает аргементом строку - пароль. Возвращает true если пароль длинее или равен 7 символам. Иначе возвращает false
+
+const password = (newPass) =>  newPass.length >= 7
+
+console.log(password('kjdvvvvvf'))
+
+
+
+// Задача 5:
+
+// Написать стрелочную функцию, которая перебирает массив слов. Массив слов передается через аргумент. И возвращает нам самое длинное слово
+
+// пример
+function giveMeTheLongestWord(words) {
+// code
+}
+
+const arr = ['Oli', 'Done', 'Apple'];
+
+console.log(giveMeTheLongestWord(arr)); // 'Apple' - потому что оно самое длинное
+    </script>
+</body>
+</html>

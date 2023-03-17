@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Напишите цикл, который считает сумму чисел от 20 до 35
+
+      let sum = 0;
+      for (let i = 20; i <= 35; i++) {
+        sum += i;
+      }
+
+      // 2. Напишите цикл, который выводит произведение всех чисел от 10 до 15
+
+      let mult = 1;
+      for (let i = 10; i <= 15; i++) {
+        mult *= i;
+      }
+
+      // 3. Дан массив чисел. Сформировать новый массив, в который войдут только положительные числа
+      const numbers = [1, 5, -7, -88, 9, 44, 15, 35, -5, 10];
+      let positive_number = [];
+      for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] > 0) positive_number.push(numbers[index]);
+      }
+      console.log(positive_number);
+
+      // 4. Сформировать новый массив из четных чисел
+      let even_numbers = [];
+      for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] % 2 === 0) {
+          even_numbers.push(numbers[index]);
+        }
+      }
+      console.log(even_numbers);
+
+      // 5. Сформировать новый массив из четных отрицательных чисел => [-88]
+      let even_negative_numbers = [];
+      for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] % 2 === 0 && numbers[index] < 0) {
+          even_negative_numbers.push(numbers[index]);
+        }
+      }
+      console.log(even_negative_numbers);
+
+      // 6. Сформировать новый массив из чисел, заканчивющихся на 5 => [5, 15, 35, -5]
+      let five_numbers = [];
+      for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] % 5 === 0 && numbers[index] % 10 != 0) {
+          five_numbers.push(numbers[index]);
+        }
+      }
+      console.log(five_numbers);
+
+      let five_numbers_two = [];
+      for (let index = 0; index < numbers.length; index++) {
+        if (numbers[index] % 10 === 5) {
+          five_numbers_two.push(numbers[index]);
+        }
+      }
+      console.log(five_numbers_two);
+
+      // 7. Сформировать новый массив, состоящий их последних цифр чисел => [1, 5, -7, -8, 9, 4, 5, 5, -5, 0]
+      let last_numbers = [];
+      for (let index = 0; index < numbers.length; index++) {
+        last_numbers.push(numbers[index] % 10);
+      }
+
+      console.log(last_numbers);
+
+      // 8. Сформировать новый массив, состоящий их последних цифр чисел
+
+      let last_numbers_positiv = [];
+      for (let index = 0; index < numbers.length; index++) {
+        last_numbers_positiv.push(
+          numbers[index] < 0 ? (numbers[index] * -1) % 10 : numbers[index] % 10
+        );
+      }
+
+      console.log(last_numbers_positiv);
+    </script>
+  </body>
+  <script src="./scripts/function.js"></script>
+</html>
