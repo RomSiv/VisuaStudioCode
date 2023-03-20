@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const a = Math.max(6, 3, -10, 73); //максимальное число
+      const b = Math.min(6, 3, -10, 73); //минимальное число
+
+      const c = Math.abs(4);
+      const d = Math.abs(-4); // возвращает натуральное число
+
+      const e = Math.ceil(4.73); //округляет в большую сторону
+      const f = Math.floor(4.73); // округляет в меньшую сторону
+      const g = Math.round(4.73); // округляет по правилам математики
+
+      const h = Math.pow(2, 2); // возведение в степень, где первое значение возводимое число, а второе степень
+      const i = Math.sqrt(4); // вычисляет квадратный корень
+
+      const j = Math.random(); // возращает случайное число от 0 до 1, не включая 0 и 1
+
+      console.log(a);
+      console.log(b);
+      console.log(c);
+      console.log(d);
+      console.log(e);
+      console.log(f);
+      console.log(g);
+      console.log(h);
+      console.log(i);
+      console.log(j);
+
+      const numbers = [1, -5, 7, -88, 9, 44, 15, 35, -5, 10];
+      let newArr = [];
+      for (let i = 0; i < numbers.length; i++) {
+        newArr.push(Math.abs(numbers[i] % 10));
+      }
+      console.log(newArr);
+
+      const getMax = (x, y, z) => Math.max(x, y, z);
+      console.log(getMax(65, 103, 5));
+
+      const func = (s, d) => Math.pow(s, d);
+      console.log(func(2, 3));
+
+      const xz = Math.round(Math.random() * 10);
+      console.log(xz);
+
+      const as = Math.round(Math.random() * 10) + 10;
+      console.log(as);
+
+      const ss = Math.round(Math.random() * 15) + 15;
+      console.log(ss);
+
+      const arr = ["hello", "good afternoon", "london", "hi"];
+
+      const newFun = () => {
+        const arrNew = [];
+        for (let index = 0; index < arr.length; index++) {
+          if (arr[index].length >= 6) {
+            arrNew.push(arr[index]);
+          }
+        }
+        return arrNew;
+      };
+      console.log(newFun(arr));
+    </script>
+  </body>
+</html>
