@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+            //           void test1(int n)
+            //   {
+            //   if (n==1)
+            //   return;
+            //   for (int i=1; i<=n; i++)
+            //   for (int j=1; j<=n; j++)
+            //   System.out.println("");
+            //   break;
+            //   }
+      //        б)
+            //   void test2(int n)
+            //   {
+            //   int a = 0;
+            //   for (i = 0; i < n; i++)
+            //   for (j = n; j > i; j--)
+            //   a = a + i + j;
+            //   }
+      //        в)
+            //   void test3(int n)
+            //   {
+            //   int i, j, a = 0;
+            //   for (i = n/2; i <=n; i++)
+            //   for (j = 2; j <=n; j=j2)
+            //   a=a+n/2;
+            //   }
+      //        г) (*)
+            //   void test4(int n)
+            //   {
+            //   int a = 0, i = n;
+            //   while (i > 0) {
+            //   a += i;
+            //   i /= 2;
+            //   }
+            //   }
+
+      // из 4-х примеров, последний "Г" самый быстрый. В первый 3-х используется квадратичный цыкл,
+      // количество действий в таком цикле будет увеличеваться в квадратичной прогресии от количества элементов(к пимеру массива)
+
+      //    Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
+
+      //    Example 1:
+        //   Input: strs = ["flower","flow","flight"]
+        //   Output: "fl"
+
+      //    Example 2:
+        //   Input: strs = ["dog","racecar","car"]
+        //   Output: ""
+
+      //    Explanation: There is no common prefix among the input strings.
+
+       const firstArr = ["flower", "flow", "flight"];
+
+
+       const secondArr = ["dog","racecar","car"];
+
+
+              function starting(array) {
+                  if (!Array.isArray(array) || array.length === 0)
+                   return '';
+
+                  let str = '',
+                      count1 = array[0].length,
+                      count2 = array.length;
+                  for (let i = 0; i < firstCounter; ++i) {
+                      let equals = true,
+                          x = array[0][i];
+                      for (let j = 1; j < secondCounter; ++j) {
+                          if (x != array[j][i]) {
+                              equals = false;
+                              break;
+                          }
+                      }
+                      if (equals)
+                          str += x;
+                  }
+                  return str;
+              }
+    </script>
+  </body>
+</html>
