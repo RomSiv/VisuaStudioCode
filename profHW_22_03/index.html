@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <img src="media/logo.png" alt="logo"/>
+      <div>
+      <img src="media/vk.png" alt="VK"/>
+      <img src="media/youtube.png" alt="youtube"/>
+      <img src="media/fb.png" alt="face book"/>
+      <img src="media/instagram.png" alt="instagram"/>
+    </div>
+    </header>
+    <main>
+      <div class="main"></div>
+      <div class="offers"></div>
+    </main>
+    <footer></footer>
+    <script>
+      // 1. Напишите функцию, которая принимает массив строк и возвращает новый массив строк, в котором все первые буквы каждого слова написаны заглавными буквами.
+
+      const stringArr = [
+        "The",
+        "London",
+        "is",
+        "a",
+        "capital",
+        "of",
+        "Great",
+        "Britan",
+      ];
+      const stringFirstLitersArray = stringArr.map(
+        (el) => el[0].toUpperCase() + el
+      );
+
+      console.log(stringFirstLitersArray);
+
+      // 2. Напишите функцию, которая принимает массив чисел и возвращает новый массив чисел, содержащий только положительные числа.
+      
+      const numArr = [3, -9, 100, -7, -4, 33, 15, 19];
+      const positiveNumArr = numArr.filter((el) => el > 0);
+
+      console.log(positiveNumArr);
+
+      // 3. Напишите функцию, которая принимает массив чисел и возвращает новый массив чисел, содержащий только нечетные числа.
+
+      const oddArr = numArr.filter((el) => el % 2 != 0);
+
+      console.log(oddArr);
+
+      // 4. Создайте новый массив, содержащий только элементы исходного массива, которые делятся на три без остатка.
+
+      const newArr = [];
+      for (let i = 0; i < numArr.length; i++) {
+        if (numArr[i] % 3 === 0) {
+          newArr.push(numArr[i]);
+        }
+      }
+      console.log(newArr);
+
+      // 5. Создайте новый массив, содержащий только те элементы исходного массива, которые больше чем 10 и меньше чем 20.
+
+      const newArr2 = [];
+      for (let i = 0; i < numArr.length; i++) {
+        if (numArr[i] > 10 && numArr[i] < 20) {
+          newArr2.push(numArr[i]);
+        }
+      }
+      console.log(newArr2);
+
+      // 6. Создайте новый массив, содержащий только те элементы исходного массива, которые не являются строками.
+
+      const numArr2 = [3, -9, "Warszawa", 100, -7, -4, "Toronto", 33, 15, 19];
+
+      const newArr3 = [];
+      for (let i = 0; i < numArr2.length; i++) {
+        if (typeof numArr2[i] === "number") {
+          newArr3.push(numArr2[i]);
+        }
+      }
+      console.log(newArr3);
+    </script>
+  </body>
+</html>

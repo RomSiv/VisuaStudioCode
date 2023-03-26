@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const array = [1,2,3,4,5,5]
+
+
+        //1 задание:
+//Надо все элементы массива вывести в консоль лог по очереди
+
+ 
+array.forEach((el) => console.log(el))
+
+array.forEach((el) => (el%2 === 0 ? console.log(el) : ''))
+
+array.forEach((el) => (console.log(el*1000)))
+
+const array1 = array.map((el) => (el*1000))
+console.log(array1)
+
+
+ /*
+      Вывести в консоль только сообщения с type === 'My'
+      Надо воспользоваться filter методом массива
+      Вывести в консоль массив
+    */
+    const array33 = [
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];
+
+/*
+  Перебрать массив array и в консоль показать только четные числа
+  Нельзя использовать for и while
+*/`,
+        type: "My",
+      },
+      {
+        text: `array.forEach(el => el % 2 === 0 ? console.log(el) : '')`,
+        type: "NotMy",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+      {
+        text: `const array = [1, 2, 3, 4, 5, 5];`,
+        type: "My",
+      },
+    ];
+
+    const filter_arr = array33.filter(el => el.type === 'My')
+    console.log(filter_arr)
+
+    </script>
+  </body>
+</html>
