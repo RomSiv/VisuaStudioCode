@@ -1,29 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-// Дан массив чисел. Используя метод map, создайте новый массив, содержащий квадраты каждого числа из исходного массива.
+      // Дан массив чисел. Используя метод map, создайте новый массив, содержащий квадраты каждого числа из исходного массива.
 
-// const numArray = [1, 3, 5, 33, 21, 2, 17, 23]
-// const sqareFun = squareArray => squareArray.map(el => el ** 2)
-// console.log(squareArray)
+      const numArray = [1, 3, 5, 33, 21, 2, 17, 23];
+      const squareArray = numArray.map((el) => el ** 2);
+      console.log(squareArray);
 
-// Дан массив объектов, каждый из которых содержит поля name и age. Используя метод filter, создайте новый массив, содержащий только тех людей, которые моложе 30 лет.
-// Дан массив строк. Используя метод map, создайте новый массив, содержащий длины каждой строки из исходного массива.
-// Дан массив объектов, каждый из которых содержит поля name, age и gender. Используя метод filter, создайте новый массив, содержащий только женщин, которым меньше 40 лет.
-// Дан массив чисел. Используя метод map, создайте новый массив, содержащий квадратный корень каждого числа из исходного массива.
-// Дан массив строк. Используя метод filter, создайте новый массив, содержащий только те строки, которые содержат более 5 символов.
-// Дан массив объектов, каждый из которых содержит поля name и age. Используя метод map, создайте новый массив, содержащий строки вида "Имя - возраст" для каждого объекта из исходного массива.
-// Дан массив чисел. Используя метод filter, создайте новый массив, содержащий только те числа, которые являются нечетными.
-// Дан массив объектов, каждый из которых содержит поля name, age и city. Используя метод filter, создайте новый массив, содержащий только тех людей, которые живут в городе "Москва".
-// Дан массив чисел. Используя метод map, создайте новый массив, содержащий значения каждого элемента исходного массива, увеличенные на 10.
+      // Дан массив объектов, каждый из которых содержит поля name и age. Используя метод filter, создайте новый массив, содержащий только тех людей, которые моложе 30 лет.
+      const arrayNameAge = [
+        {
+          name: 'Vasia',
+          age: 29,
+        },
+        {
+          name: 'Valia',
+          age: 33,
+        },
+        {
+          name: 'Alex',
+          age: 49,
+        },
+        {
+          name: 'Nadia',
+          age: 22,
+        },
+        {
+          name: 'Vovka',
+          age: 18,
+        },
+      ];
+
+      const youngPepols = arrayNameAge.filter(el => el.age < 30)
+      console.log(youngPepols)
+
+      // Дан массив строк. Используя метод map, создайте новый массив, содержащий длины каждой строки из исходного массива.
+      
+      const stringArray = [
+        "So",
+        "close",
+        "do",
+        "matter",
+        "how",
+        "far",
+        "couldnt",
+        "be",
+        "much",
+        "more",
+        "from",
+        "the",
+        "heart",
+        "forever",
+        "trusting",
+        "who",
+        "we",
+        "are",
+        "and",
+        "nothing",
+        "else",
+        "matters",
+      ];
+
+      const arreyLength = stringArray.map(el => el.length)
+      console.log(arreyLength)
+      
+      // Дан массив объектов, каждый из которых содержит поля name, age и gender. Используя метод filter, создайте новый массив, содержащий только женщин, которым меньше 40 лет.
+      
+      const arrayNameAgeFamale = [
+        {
+          name: 'Vasia',
+          age: 29,
+          gender: 'Male'
+        },
+        {
+          name: 'Valia',
+          age: 33,
+          gender: 'Famale'
+        },
+        {
+          name: 'Ania',
+          age: 49,
+          gender: 'Famale'
+        },
+        {
+          name: 'Nadia',
+          age: 22,
+          gender: 'Famale'
+        },
+        {
+          name: 'Vovka',
+          age: 18,
+          gender: 'Male'
+        },
+      ];
+
+const youngFamale = arrayNameAgeFamale.filter(el => el.age < 40 && el.gender === 'Famale')
+console.log(youngFamale)
+      
+      // Дан массив чисел. Используя метод map, создайте новый массив, содержащий квадратный корень каждого числа из исходного массива.
+     
+     const arrayNew = [1, 3, 5, 33, 21, 2, 17, 23];
+     const newArray = arrayNew.map(el => Math.sqrt(el))
+     console.log(newArray)
+     
+      // Дан массив строк. Используя метод filter, создайте новый массив, содержащий только те строки, которые содержат более 5 символов.
+      
+      const moreFiveArray = stringArray.filter(el => el.length > 5)
+      console.log(moreFiveArray)
+      
+      // Дан массив объектов, каждый из которых содержит поля name и age. Используя метод map, создайте новый массив, содержащий строки вида "Имя - возраст" для каждого объекта из исходного массива.
+     
+     const newNameAgeArrey = arrayNameAge.map(el => el.name +' - '+ el.age)
+     console.log(newNameAgeArrey)
+     
+      // Дан массив чисел. Используя метод filter, создайте новый массив, содержащий только те числа, которые являются нечетными.
+      
+      const oddNumArray = numArray.filter(el => el % 2 != 0)
+      console.log(oddNumArray)
+      
+      // Дан массив объектов, каждый из которых содержит поля name, age и city. Используя метод filter, создайте новый массив, содержащий только тех людей, которые живут в городе "Москва".
+      
+      const cityNameAgeArray = [
+        {
+          name: 'Vasia',
+          age: 29,
+          city: 'Warszawa'
+        },
+        {
+          name: 'Valia',
+          age: 33,
+          city: 'Москва'
+        },
+        {
+          name: 'Ania',
+          age: 49,
+          city: 'Berlin'
+        },
+        {
+          name: 'Nadia',
+          age: 22,
+          city: 'Москва'
+        },
+        {
+          name: 'Vovka',
+          age: 18,
+          city: 'London'
+        },
+      ];
+      
+const moscowArray = cityNameAgeArray.filter(el => el.city === 'Москва')
+console.log(moscowArray)
+
+      // Дан массив чисел. Используя метод map, создайте новый массив, содержащий значения каждого элемента исходного массива, увеличенные на 10.
+
+      const plusTenArray = numArray.map(el => el + 10)
+      console.log(plusTenArray)
     </script>
-</body>
+  </body>
 </html>
-
