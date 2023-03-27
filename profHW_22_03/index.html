@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-
     <header class="header">
-      <img src="media/logo.png" alt="logo"/>
+      <img src="media/logo.png" alt="logo" />
       <div>
-      <img src="media/vk.png" alt="VK"/>
-      <img src="media/youtube.png" alt="youtube"/>
-      <img src="media/fb.png" alt="face book"/>
-      <img src="media/instagram.png" alt="instagram"/>
-    </div>
+        <img src="media/vk.png" alt="VK" />
+        <img src="media/youtube.png" alt="youtube" />
+        <img src="media/fb.png" alt="face book" />
+        <img src="media/instagram.png" alt="instagram" />
+      </div>
     </header>
     <main>
       <div class="main"></div>
@@ -25,7 +24,8 @@
     <footer></footer>
     <script>
       // 1. Напишите функцию, которая принимает массив строк и возвращает новый массив строк, в котором все первые буквы каждого слова написаны заглавными буквами.
-
+      // const getUpper = array => array.map(elem => elem[0].toUpperCase() + elem.slice(1))
+      
       const stringArr = [
         "The",
         "London",
@@ -36,14 +36,13 @@
         "Great",
         "Britan",
       ];
-      const stringFirstLitersArray = stringArr.map(
-        (el) => el[0].toUpperCase() + el
-      );
+      const getUpper = stringArr => stringArr.map(el => el[0].toUpperCase() + el.slice(1))
+      ;
 
-      console.log(stringFirstLitersArray);
+      console.log(getUpper(stringArr));
 
       // 2. Напишите функцию, которая принимает массив чисел и возвращает новый массив чисел, содержащий только положительные числа.
-      
+
       const numArr = [3, -9, 100, -7, -4, 33, 15, 19];
       const positiveNumArr = numArr.filter((el) => el > 0);
 
@@ -65,6 +64,10 @@
       }
       console.log(newArr);
 
+      const newArr33 = numArr.filter((el) => el % 3 === 0);
+
+      console.log(newArr33);
+
       // 5. Создайте новый массив, содержащий только те элементы исходного массива, которые больше чем 10 и меньше чем 20.
 
       const newArr2 = [];
@@ -74,6 +77,10 @@
         }
       }
       console.log(newArr2);
+
+      const newArr34 = numArr.filter(el => el > 10 && el < 20)
+
+      console.log(newArr34)
 
       // 6. Создайте новый массив, содержащий только те элементы исходного массива, которые не являются строками.
 
@@ -86,6 +93,10 @@
         }
       }
       console.log(newArr3);
+
+      const newArr35 = numArr.filter(el => typeof el ==="number")
+
+      console.log(newArr35)
     </script>
   </body>
 </html>

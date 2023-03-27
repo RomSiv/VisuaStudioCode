@@ -10,9 +10,62 @@
     <script>
         // ДЗ (for и forEach)
 // 1. Дан массив с числами. Вычислить сумму элементов массива
+
+const numArray = [1, 3, 5, 33, 21, 2, 17, 23]
+let sumNumFor = []
+
+
+for (let i = 0; i < numArray.length; i++) 
+    sumNumFor += numArray[i]
+
+
+console.log(sumNumFor)
+
+
 // 2. Дан массив со строками. Сформировать новый массив, в который попадут все строки из исходного массива, длина которых больше 7 символов
+
+const stringArray = ['So', 'close', 'do', 'matter', 'how', 'far', 'couldnt', 'be', 'much', 'more', 'from', 'the', 'heart', 'forever', 'trusting', 'who', 'we', 'are', 'and', 'nothing', 'else', 'matters']
+const moreSevenArray = []
+const moreSevenArrayFor = []
+
+for (let i = 0; i < stringArray.length; i++) {
+    if(stringArray[i].length > 7){
+        moreSevenArrayFor.push(stringArray[i])
+    }
+}
+console.log(moreSevenArrayFor)
+
+stringArray.forEach((el) => moreSevenArray.push(el.length > 7 ? el : ''))
+console.log(moreSevenArray)
+
 // 3. Дан массив со строками. Сформировать новый массив, в который попадут все строки из исходного массива, которые начинаются на букву D или d
+
+const startWithDArrey = []
+const startWithDArreyFor = []
+
+for (let i = 0; i < stringArray.length; i++) 
+if(stringArray[0].toLowerCase() === 'd' ){
+    startWithDArreyFor.push(stringArray[i])
+}
+
+
+stringArray.forEach((el) => startWithDArrey.push(el[0].toLowerCase() === 'd' ? el : ''))
+
+console.log(startWithDArrey)
+console.log(startWithDArreyFor)
+
 // 4. Дан массив с числами. Сформировать новый массив, в который попадут все числа из исходного массива, возведенные в 3 степень
+const arrayX3 = []
+const arrayX3For = []
+
+for (let i = 0; i < numArray.length; i++) {
+    arrayX3For.push(numArray[i] ** 3)
+}
+console.log(arrayX3For)
+
+numArray.forEach((el) => arrayX3.push(el ** 2))
+console.log(arrayX3)
+
 // 5. Дан массив с числами. Сформировать новый массив, в который попадут все числа из исходного массива, заканчивающиеся на 7
     </script>
 </body>
