@@ -93,7 +93,8 @@ console.log(activeAdultArrDToLC_D);
 // ****
 // 1. Сформировать новый массив, где пользователи будут отсортированы по возрасту (.sort())
 
-const sortArr = users.sort((a, b) => a.age  - b.age)
+const sortArr = users.slice().sort((a, b) => a.age  - b.age)
+console.log(users);
 console.log(sortArr);
 
 

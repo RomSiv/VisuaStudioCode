@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="greeting"></p>
+    <div class="container"></div>
+
+    <script>
+
+// .sort() сортирует элементы массива(исходящий массив мутирует), в качестве элемента принимает колбэк функцию.
+
+const numbers = [33, 11, 1, 4, 81]
+
+numbers.sort()  // в таком случает отсортирует по первой цифре от меньшего к большему
+console.log(numbers)
+
+numbers.sort((a, b) => a - b)  // от меньшего к большему
+console.log(numbers)
+
+numbers.sort((a, b) => b - a)  // от большего к меньшему
+console.log(numbers)
+
+
+const names = ['Anna', 'Vasia', 'Piotr', 'Przemek']
+names.sort()  // Отсартирует по алфавиту
+console.log(names);
+
+names.sort((a, b) => a.localeCompare(b)) // с помощью локалКомпэ сортируем с нестандартными буквами(польские, немецкие и т.д.) 
+console.log(names);
+
+names.sort((a, b) => b.localeCompare(a)) 
+console.log(names);
+
+const nums = [5, 32, 334, 25, 58, 85];
+
+const nums_map = nums.map(el => el).sort((a, b) => a - b);
+const nums_slice = nums.slice().sort((a, b) => a - b);
+const nums_spread = [...nums].sort((a, b) => a - b); 
+
+console.log(nums);
+console.log(nums_map);
+console.log(nums_slice);
+console.log(nums_spread);
+
+
+// .reduce() - возвращает аккумулирующее значение
+
+let acc = 0;
+for(let i = 0; i < nums.length; i++){
+  acc += nums[i]
+}
+
+const sum = nums.reduce((acc, el) => acc + el, 0);
+
+
+// spread-оператор - раскладывает массив на элементы
+
+console.log(nums); // [5, 32, 334, 25, 58, 85]
+console.log(...nums); // 5 32 334 25 58 85
+
+    </script>
+</body>
+<script src="./scripts/script.js"></script>
+</html>
