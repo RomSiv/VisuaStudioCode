@@ -35,8 +35,8 @@ const pricePar = document.querySelector(".price")
 products.forEach((products) => {
   const card = document.createElement("div");
   card.classList.add("product-card");
-  card.innerHTML = `<h2>Title: ${products.title}</h2>
-<p class='price'>price: ${products.price}</p>
+  card.innerHTML = `<h2 style="font-size: 35px; font-family: monospace; color: #cd66cc">Title: ${products.title}</h2>
+<p class='price' style="font-size: 140%; color: white">price: ${products.price}</p>
 <p class='in_stock'>in stock: ${products.in_stock}</p>
 <p class='id'>id: ${products.id}</p>`;
 
