@@ -30,25 +30,25 @@ const products = [
 ];
 
 const container = document.querySelector(".card");
-const pricePar = document.querySelector(".price")
+
 
 products.forEach((products) => {
   const card = document.createElement("div");
   card.classList.add("product-card");
-  card.innerHTML = `<h2 style="font-size: 35px; font-family: monospace; color: #cd66cc">Title: ${products.title}</h2>
+  card.innerHTML = `
+<h2 style="font-size: 35px; font-family: monospace; color: red">Title: ${products.title}</h2>
 <p class='price' style="font-size: 140%; color: white">price: ${products.price}</p>
 <p class='in_stock'>in stock: ${products.in_stock}</p>
-<p class='id'>id: ${products.id}</p>`;
+<p class='id'>id: ${products.id}</p>
+`;
 
   container.append(card);
   card.style.border = "5px solid black";
   card.style.padding = "5px";
+  card.style.margin = "5px";
   card.style.width = "200px";
   card.style.textAlign = "center";
   card.style.borderRadius = "20px";
-
-  pricePar.style.color = 'pink'
-  pricePar.style.fontSize = '80px'
 
   if (products.in_stock === true) {
     card.style.backgroundColor = "green";
