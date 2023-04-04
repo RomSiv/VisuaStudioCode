@@ -100,5 +100,8 @@ console.log(sortArr);
 
 // 2. Найти сумму возрастов всех пользователей (.reduce())
 
-let sum = users.reduce((sum, age) => sum + age.age, 0)
-console.log(sum);
+const sumAge = users.reduce((sum, age) => sum + age.age, 0)
+const sumAge1 = users.reduce((sum, {age}) => sum + age, 0)
+
+console.log(sumAge);
+console.log(sumAge1);

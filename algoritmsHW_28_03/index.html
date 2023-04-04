@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Task 1. Закончить итерационное решение задачи о Ханойских башнях
+function hanoiTower(n, from, to, temp) {
+  const stack = [];
+
+  
+  stack.push({n, from, to, temp});
+
+ 
+  while (stack.length > 0) {
+    const {n, from, to, temp} = stack.pop();
+
+    if (n === 1) {
+      console.log(`Move disk from ${from} to ${to}`);
+    } else {
+      stack.push({n: n - 1, from, to: temp, temp: to});
+      stack.push({n: 1, from, to, temp});
+      stack.push({n: n - 1, from: temp, to, temp: from});
+    }
+  }
+}
+
+
+hanoiTower(3, 'A', 'C', 'B');
+
+// Task 2. 1. Даны два целых числа x и n, напишите функцию для вычисления x^n
+//      решение 1 - рекурсивно O(n)
+
+function powerRecursive(x, n) {
+  if (n === 0) {
+    return 1;
+  } else if (n === 1) {
+    return x;
+  } else {
+    return x * powerRecursive(x, n - 1);
+  }
+}
+
+console.log(powerRecursive(2, 5));
+
+//      решение 2 - улучшить решение 1 до O(log n)
+
+function powerOptimized(x, n) {
+  if (n === 0) {
+    return 1;
+  } else if (n === 1) {
+    return x;
+  } else if (n % 2 === 0) {
+    const temp = powerOptimized(x, n / 2);
+    return temp * temp;
+  } else {
+    const temp = powerOptimized(x, (n - 1) / 2);
+    return x * temp * temp;
+  }
+}
+
+console.log(powerOptimized(2, 5));
+
+function findPeakElement(matrix) {
+  const numRows = matrix.length;
+  const numCols = matrix[0].length;
+
+  // Функция для нахождения максимального элемента в середине строки
+  const findMaxInRow = (row) => {
+    let left = 0;
+    let right = numCols - 1;
+
+    while (left < right) {
+      const mid = Math.floor((left + right) / 2);
+      if (matrix[row][mid] < matrix[row][mid + 1]) {
+        left = mid + 1;
+      } else {
+        right = mid;
+      }
+    }
+
+    return left;
+  };
+
+  // 4 Найдите пиковый элемент в двумерном массиве
+// Элемент является пиковым, если он больше или равен своим четырем соседям слева, справа, сверху и снизу. Например, соседями для A[i][j] являются A[i-1][j], A[i+1][j],
+//  A[i][j-1] и A[i][j+1]. Для угловых элементов отсутствующие соседи считаются отрицательными бесконечными значениями.
+
+  let row = Math.floor(numRows / 2);
+  let col = findMaxInRow(row);
+
+  while (true) {
+    let peak = matrix[row][col];
+
+    
+    const top = row > 0 ? matrix[row - 1][col] : Number.NEGATIVE_INFINITY;
+    const bottom = row < numRows - 1 ? matrix[row + 1][col] : Number.NEGATIVE_INFINITY;
+    const left = col > 0 ? matrix[row][col - 1] : Number.NEGATIVE_INFINITY;
+    const right = col < numCols - 1 ? matrix[row][col + 1] : Number.NEGATIVE_INFINITY;
+
+    if (peak >= top && peak >= bottom && peak >= left && peak >= right) {
+      return [row, col];
+    }
+
+   
+    if (top > peak && top >= bottom && top >= left && top >= right) {
+      row--;
+    } else if (bottom > peak && bottom >= left && bottom >= right) {
+      row++;
+    } else if (left > peak && left >= right) {
+      col--;
+    } else {
+      col++;
+    }
+  }
+}
+
+
+    </script>
+</body>
+</html>

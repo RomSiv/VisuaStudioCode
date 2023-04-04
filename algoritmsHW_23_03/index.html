@@ -37,6 +37,31 @@ console.log(bolt(3))
 // Перемещаем диск 1 с средний на левый
 // Перемещаем диск 2 с средний на правый
 // Перемещаем диск 1 с левый на правый
-    </script>
+   
+function hanoiTower(n, from, to, temp) {
+  const stack = [];
+
+  
+  stack.push({n, from, to, temp});
+
+  
+  while (stack.length > 0) {
+    const {n, from, to, temp} = stack.pop();
+
+    if (n === 1) {
+      console.log(`Move disk from ${from} to ${to}`);
+    } else {
+      stack.push({n: n - 1, from, to: temp, temp: to});
+      stack.push({n: 1, from, to, temp});
+      stack.push({n: n - 1, from: temp, to, temp: from});
+    }
+  }
+}
+
+
+hanoiTower(3, 'A', 'C', 'B');
+   
+   
+   </script>
 </body>
 </html>
