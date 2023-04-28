@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.icons_block {
+  display: flex;
+}
+
+.icons_block div {
+  padding: 0 20px;
+}
+
+.icons_block :first-child {
+  border-right: 1px solid #dadbdd;
+}
+
+nav a {
+  color: #424551;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.search_input {
+  border: 1px solid #d7dadd;
+  padding: 12px 16px;
+  border-radius: 4px;
+  width: 380px;
+}
+
+.green_baner {
+  background-color: #17696a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.green_baner a {
+  color: white;
+  margin: 0 2px;
+  font-size: 12px;
+}
+
+.green_baner button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  margin: 0 15 px;
+}
+
+.first_link {
+  font-weight: 900;
+  text-decoration: none;
+}
+
+#catigory_block {
+  background-image: url("../media/manswear_background.png");
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+}
+
+.img_block {
+  padding: 140px 0 180px 0;
+}
+
+.new_collection {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1E212C;
+}
+
+section h2 {
+  font-size: 72px;
+  margin: 20px 0 60px 0;
+  font-weight: 900;
+  color: #1E212C;
+}
+
+.buttoms button {
+border: 1px solid #17696A;
+border-radius: 4px;
+height: 52px;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+}
+
+.buttoms {
+    display: flex;
+    gap: 24px;
+}
+
+.shop_sale {
+  width: 152px;
+  background-color: transparent;
+  color: #17696a;
+}
+
+.shop_the_mw {
+  width: 229px;
+  background-color: #17696a;
+  color: white;
+}
+
+.numbers_block {
+    display: flex;
+    gap: 4px;
+    color: rgba(66, 69, 81, 0.6);
+    margin-top: 180px;
+}
+
+.numbers_block div {
+    border-bottom: 2px solid  rgba(66, 69, 81, 0.6);
+    padding-bottom: 15px;
+    font-size: 28px;
+    font-weight: 700;
+    width: 178px;
+    cursor: pointer;
+}
+
+.numbers_block div:hover {
+    color:  rgba(66, 69, 81, 1);
+    border-bottom: 2px solid rgba(66, 69, 81, 1);
+}
+
+.black_flame {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 44px;
+  background-color: #1E212C;
+}
+
+.contact {
+  color: rgb(198, 189, 189);
+  font-size: 14px;
+  width: 204px;
+  height: 21px;
+}
+
+
+.menu button {
+  height: 21px;
+  width: 113px;
+  margin: 0 16px;
+  background-color: transparent;
+  color: rgb(198, 189, 189); 
+  border: none;
+  cursor: pointer;
+}
+
+.btn :first-child{
+  margin: 12px;
+} 
+
+.btn button {
+  color: rgb(198, 189, 189);;
+  background-color: transparent;
+  color: rgb(198, 189, 189); 
+  border: none;
+  margin: 0 35px;
+  cursor: pointer;
+}
+
+
+.category_card div {
+  height: 390px;
+  width: 390px;
+}
+
+.category_card {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+#catygory_flex_block {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: -50px;
+}
+
+.new_arrivals_conteiner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px
+}
+
+.new_arrivals div {
+  width: 285px;
+  height: 320px;
+  border-radius: 4px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.heardElem {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  cursor: pointer;
+  background-color: white;
+  color: #787a80;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.heardElem:hover {
+  color: white;
+  background-color: red;
+}
+
+.title_el {
+  font-size: 18px;
+  color: #424551;
+}
+
+.price_el {
+font-size: 20px;
+font-weight: 700;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 46px;
+  font-weight: 900;
+  margin-top: 226px;
+}
+
+.link_arrivals {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #787a80;
+  margin-top: 26px;
+}
+
+ a {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #17696A;
+}
+
+.heardElem.liked {
+  color: white;
+  background-color: red;
+}
+
+
+.wrapper_2 {
+  max-width: 1860px;
+  margin: auto;
+}
+
+.img_grip > div{
+
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+
+}
+
+#grid_baner {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px
+}
+
+#grid_baner div:nth-child(1){
+  grid-column: 1/3;
+}
+
+#grid_baner div:nth-child(2){
+  grid-column: 3/6;
+}
+
+#grid_baner div:nth-child(3){
+  grid-column: 1/4;
+}
+
+#grid_baner div:nth-child(4){
+  grid-column: 4/6;
+}
+
+#grid_baner div > p {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#grid_baner div > h3 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 20px 0 40px 0;
+}
+
+#grid_baner .btnElem {
+  color: #17696A;
+  border: 1px solid #17696A;
+  border-radius: 4px;
+  padding: 14px 32px;
+  cursor: pointer;
+  display: inline;
+  font-weight: 700;
+}
+
