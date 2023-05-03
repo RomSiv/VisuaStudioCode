@@ -291,6 +291,7 @@ h3 {
 }
 
 #grid_baner {
+  padding: 180px 0 0 0;
   display: grid;
 
   grid-template-columns: repeat(5, 1fr);
@@ -317,12 +318,15 @@ h3 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
+  display: flex;
+  justify-content: ;
 }
 
 #grid_baner div > h3 {
   font-size: 32px;
   font-weight: 900;
-  margin: 20px 0 40px 0;
+  /* margin: 20px 0 40px 0; */
+  width: 390px;
 }
 
 #grid_baner .btnElem {
