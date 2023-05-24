@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.add_workers_form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(241, 237, 232);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+}
+
+
+.workers_container div {
+    width: 200px;
+    height: 250px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+img {
+    width: 190px;
+    height: auto;
+}
