@@ -25,14 +25,17 @@
 // a >= 10 ? console.log('hello') : console.log("hi")
 
 
-const numbers = [6, 7, 1, -10, 78, 18, -5, -38, 9];
-const newNumbers = []
+// const numbers = [6, 7, 1, -10, 78, 18, -5, -38, 9];
+// const newNumbers = []
 
-for (let i = 0; i < numbers.length; i++) {
-    if(numbers[i] > 0)
-        newNumbers.push(numbers[i] / 2)
-}
-console.log(newNumbers);
+// for (let i = 0; i < numbers.length; i++) {
+//     if(numbers[i] > 0)
+//         newNumbers.push(numbers[i] / 2)
+// }
+// console.log(newNumbers);
 
+const arr = [1, 2, -5, 0, -4]
 
+arr.forEach(e =  e >= 0)
+console.log(arr);
 
